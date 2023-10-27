@@ -6,3 +6,13 @@ document.getElementById("navBtn").addEventListener("click", function () {
         lista.style.display = "none";
     }
 });
+
+document.getElementById("navVoltar").addEventListener("click", function () {
+    var nav = document.getElementById("navLi");
+    if (nav.style.display === "block") {
+        nav.style.display = "none";
+    } else {
+        nav.style.display = "block";
+    }
+});
+

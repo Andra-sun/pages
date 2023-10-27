@@ -24,22 +24,40 @@ nav{
     width: 100%;
     position: fixed;
     padding: 15px;
+    flex-direction: column;
 }
-nav button{
+#navBtn{
     width: 3rem;
     height: 3rem;
     background-color: #01c8f0;  
     border-radius: 0.5rem;
+    z-index: 999;
+}
+#navVoltar{
+    margin: 0;
+    height: 4rem;
+    position: static;
+    width: 16rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 2rem;
+    background-color: #01c8f0;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bolder;
 }
 nav ul{
     height: 100%;
     width: 20%;
     background-color: #01c8f0;
-    z-index: 99;
     display: block;
     margin: 0;
     border-radius: 0.5rem;
     padding: 30px;
+    position: fixed;
+    left: 0;
+    top: 0;
 }
 nav li{
     text-decoration: none;
@@ -61,6 +79,18 @@ main{
     margin-top: 5rem;
     padding: 20px;
 }
+footer {
+    width: 100%;
+    background-color: #fd753c;
+    margin: 0;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    position: fixed;
+    text-align: center;
+    padding: 10px;
+}
+
 
 colors{
     background-color: #933df9;
