@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #fff;
 }
@@ -128,12 +129,11 @@ article {
     background-color: #933df9;
     border-radius: 0.28rem;
     height: 10rem;
+    margin: 3rem;
     display: flex;
     flex-direction: row;
-    margin-top: 3rem;
     padding: 30px;
     width: 20rem;
-    margin-left: 2rem;
     text-align: start;
     justify-content: center;
     align-items: center;
