@@ -5,9 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>projetos</title>
         <link rel="stylesheet" href="style.css" />
-        <link rel="icon" href="gato.jpg" type="image/jpg">
-        <link rel="shortcut icon" href="gato.jpg" type="image/jpg">
-
+        <link rel="icon" href="gato.jpg" type="image/jpg" />
+        <link rel="shortcut icon" href="gato.jpg" type="image/jpg" />
     </head>
     <body>
         <header>
@@ -33,51 +32,65 @@
                             />
                         </button>
                     </div>
-                    <li><a href="#">a</a></li>
-                    <li><a href="#">b</a></li>
-                    <li><a href="#">c</a></li>
+                    Tipo:
+                    <li id="calcBtn" class="filterable">Calculadoras</li>
+                    <li id="escolaBtn" class="filterable">Escola</li>
+                    Organizar por:
+                    <li>Data</li>
                     <button id="navVoltar">voltar</button>
                 </ul>
             </nav>
         </header>
 
         <main>
-            <a href="https://andra-sun.github.io/calculator/">
-                <article class="article" id="article1">
-                    <img
-                        src="https://cdn-icons-png.flaticon.com/128/1440/1440480.png"
-                        alt="calculadora"
-                    />
-                    <section>
-                        <h4>
-                            <ul>
-                                <li>Equação de segundo grau</li>
-                                <li>conversor de medidas de comprimento</li>
-                                <li>Area e perimetro de figuras planas</li>
-                            </ul>
-                        </h4>
-                    </section>
-                </article>
-            </a>
+            <div class="calculadora">
+                <a href="https://andra-sun.github.io/calculator/">
+                    <article id="article1" class="article">
+                        <img
+                            src="https://cdn-icons-png.flaticon.com/128/1440/1440480.png"
+                            alt="calculadora"
+                        />
+                        <section>
+                            <h4>
+                                <ul>
+                                    <li>Equação de segundo grau</li>
+                                    <li>conversor de medidas de comprimento</li>
+                                    <li>Area e perimetro de figuras planas</li>
+                                </ul>
+                            </h4>
+                        </section>
+                    </article>
+                </a>
+            </div>
 
-            <a href="https://andra-sun.github.io/ia/">
-                <article class="article" id="article2">
-                    <img
-                        src="https://cdn-icons-png.flaticon.com/128/8123/8123520.png"
-                        alt="infografico"
-                    />
-                    <section>
-                        <h4>
-                            Infografico sobre inteligencia artificial feito para
-                            um trabalho escolar
-                        </h4>
-                    </section>
-                </article>
-            </a>
-            
+            <div class="escola">
+                <a href="https://andra-sun.github.io/ia/">
+                    <article id="article2" class="article">
+                        <img
+                            src="https://cdn-icons-png.flaticon.com/128/8123/8123520.png"
+                            alt="infografico"
+                        />
+                        <section>
+                            <h4>
+                                Infografico sobre inteligencia artificial feito
+                                para um trabalho escolar
+                            </h4>
+                        </section>
+                    </article>
+                </a>
+            </div>
         </main>
-        <h4 id="sair"><img src="https://cdn-icons-png.flaticon.com/128/93/93634.png" alt=""> Voltar </h4>
-        <footer><h3>e aqui vem o rodapé</h3></footer>
+        <h4 id="sair">
+            <img
+                src="https://cdn-icons-png.flaticon.com/128/93/93634.png"
+                alt=""
+            />
+            Voltar
+        </h4>
+        <footer>
+            <h3>Made by Andra</h3>
+            <br />
+        </footer>
         <script src="btnNav.js"></script>
         <script src="busca.js"></script>
     </body>

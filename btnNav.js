@@ -16,49 +16,97 @@ document.getElementById("navVoltar").addEventListener("click", function () {
     }
 });
 
-document.getElementById("buscarBtn").addEventListener("click", function () {
-    var pesquisar = document.getElementById("navLi");
-    if (pesquisar.style.display === "block") {
-        pesquisar.style.display = "none";
-    } else {
-        pesquisar.style.display = "block";
-    }
+
+
+/* voltar btn */
+document.getElementById("sair").addEventListener("click", function () {
+    var navLi = document.getElementById("navLi");
+    navLi.style.display = "none";
+
+    var caixaDePesquisa = document.getElementById("caixaDePesquisa");
+    caixaDePesquisa.value = "";
+
+    var artigos = document.querySelectorAll(".article");
+    artigos.forEach(function (artigo) {
+        artigo.style.display = "flex";
+    });
+
+    var sairBtn = document.getElementById("sair");
+    sairBtn.style.display = "none";
+
+    var calculadoras = document.querySelectorAll(".calculadora");
+    calculadoras.forEach(function (calculadora) {
+        calculadora.style.display = "flex";
+    });
+
+    var escolas = document.querySelectorAll(".escola");
+    escolas.forEach(function (escola) {
+        escola.style.display = "flex";
+    });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const caixaDePesquisa = document.getElementById('caixaDePesquisa');
-    const artigos = document.querySelectorAll('.article');
-    const sairBtn = document.getElementById('sair');
 
-    caixaDePesquisa.addEventListener('input', function() {
+/* filtragem */
+document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = document.querySelectorAll(".filterable");
+    const calculadoras = document.querySelectorAll(".calculadora");
+    const escolas = document.querySelectorAll(".escola");
+
+    filterButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+            const filterClass =
+                this.id === "calcBtn" ? "calculadora" : "escola";
+            const hideClass = this.id === "calcBtn" ? "escola" : "calculadora";
+
+            calculadoras.forEach((calculadora) => {
+                calculadora.style.display =
+                    filterClass === "calculadora" ? "block" : "none";
+            });
+
+            escolas.forEach((escola) => {
+                escola.style.display =
+                    filterClass === "escola" ? "block" : "none";
+            });
+
+            document.getElementById("navLi").style.display = "none";
+            document.getElementById("sair").style.display = "block";
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const caixaDePesquisa = document.getElementById("caixaDePesquisa");
+    const artigos = document.querySelectorAll(".calculadora, .escola");
+    const sairBtn = document.getElementById("sair");
+
+    caixaDePesquisa.addEventListener("input", function () {
         const termo = this.value.toLowerCase();
 
-        artigos.forEach(function(artigo) {
+        artigos.forEach(function (artigo) {
             const textoArtigo = artigo.textContent.toLowerCase();
             const articleID = artigo.id;
 
             if (textoArtigo.includes(termo)) {
-                document.getElementById(articleID).style.display = 'flex';
+                document.getElementById(articleID).style.display = "flex";
             } else {
-                document.getElementById(articleID).style.display = 'none';
+                document.getElementById(articleID).style.display = "none";
             }
         });
 
-        if (termo !== '') {
-            sairBtn.style.display = 'block'; 
+        if (termo !== "") {
+            sairBtn.style.display = "block";
         } else {
-            sairBtn.style.display = 'none'; 
+            sairBtn.style.display = "none";
         }
     });
 
-    sairBtn.addEventListener('click', function() {
-        caixaDePesquisa.value = ''; 
+    sairBtn.addEventListener("click", function () {
+        caixaDePesquisa.value = "";
 
-        artigos.forEach(function(artigo) {
-            artigo.style.display = 'flex'; 
+        artigos.forEach(function (artigo) {
+            artigo.style.display = "flex";
         });
 
-        sairBtn.style.display = 'none'; 
+        sairBtn.style.display = "none";
     });
 });
-

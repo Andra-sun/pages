@@ -16,3 +16,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+document.getElementById("buscarBtn").addEventListener("click", function () {
+    var pesquisar = document.getElementById("navLi");
+    if (pesquisar.style.display === "block") {
+        pesquisar.style.display = "none";
+    } else {
+        pesquisar.style.display = "block";
+    }
+});
