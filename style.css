@@ -192,6 +192,8 @@ footer {
 footer img{
     height: 2rem;
     margin-top: -1rem;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
 }
 footer h3{
     margin-bottom: 0;
