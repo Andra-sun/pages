@@ -14,6 +14,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 artigo.style.display = "none";
             }
         });
+        var sairBtn = document.getElementById("sair");
+        if (termo !== "") {
+            sairBtn.style.display = "block";
+        } else {
+            sairBtn.style.display = "none";
+        }
     });
 });
 
