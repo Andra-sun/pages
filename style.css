@@ -34,14 +34,16 @@ nav {
     z-index: 999;
 }
 #navVoltar {
-    margin: 0;
+    /* margin: 0; */
     height: 4rem;
-    position: static;
+    position: block;
     width: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin-bottom: 2rem;
+    /* top: 0; */
+    bottom: 0;
+/*     left: 0;
+    right: 0; */
+    margin-bottom: 1rem;
+    margin-top: 3rem;
     background-color: #01c8f0;
     color: #fff;
     font-size: 1.5rem;
@@ -84,7 +86,7 @@ nav li {
 }
 #caixaDePesquisa {
     width: 10rem;
-    bottom: 0;
+    /* bottom: 0; */
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
     border: none;
     font-size: 1rem;
@@ -93,14 +95,14 @@ nav li {
     display: flex;
     flex-direction: row;
     background-color: deeppink;
-    bottom: 0;
-    margin-bottom: 1.3rem;
-    position: fixed;
+    /* bottom: 0; */
+    margin-bottom: 2rem;
+    /* position: fixed; */
     width: 15rem;
     height: 3.5rem;
 }
 #buscarBtn {
-    bottom: 0;
+    /* bottom: 0; */
     display: flex;
     width: 5rem;
     justify-content: center;
@@ -145,10 +147,24 @@ article li{
 }
 
 
-
 section{
-    color: #fff;
     justify-content: center;
+    color: #fff;
+}
+
+#sair{
+    display: none;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 77%;
+    position: fixed;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+#sair img{
+    width: 1.5rem;
 }
 
 footer {
