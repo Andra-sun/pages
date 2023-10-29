@@ -16,6 +16,7 @@ header {
     flex-direction: row-reverse;
     justify-content: center;
     text-transform: uppercase;
+    margin-bottom: 3rem;
 }
 nav {
     justify-content: center;
@@ -133,7 +134,9 @@ article {
     background-color: #933df9;
     border-radius: 0.28rem;
     height: 10rem;
-    margin: 3rem;
+    margin-left: 2.3rem;
+    margin-right: 2.3rem;
+    margin-top: 5rem;
     display: flex;
     flex-direction: row;
     padding: 30px;
